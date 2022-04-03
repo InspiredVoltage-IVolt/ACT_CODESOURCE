@@ -1,0 +1,2 @@
+CREATE TYPE [dbo].[JSON(VALUE_CHANGELOG)] FROM nvarchar (max) NULL
+GO

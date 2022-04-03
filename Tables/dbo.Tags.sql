@@ -12,3 +12,5 @@ CREATE TABLE [dbo].[Tags]
 GO
 ALTER TABLE [dbo].[Tags] ADD CONSTRAINT [PK_Tags] PRIMARY KEY CLUSTERED ([ID]) ON [PRIMARY]
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Shared', 'SCHEMA', N'dbo', 'TABLE', N'Tags', NULL, NULL
+GO

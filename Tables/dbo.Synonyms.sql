@@ -14,3 +14,5 @@ ALTER TABLE [dbo].[Synonyms] ADD CONSTRAINT [PK_Synonyms] PRIMARY KEY CLUSTERED 
 GO
 ALTER TABLE [dbo].[Synonyms] ADD CONSTRAINT [FK_Synonyms_Databases_ID] FOREIGN KEY ([Database_ID]) REFERENCES [dbo].[Databases] ([ID])
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Database', 'SCHEMA', N'dbo', 'TABLE', N'Synonyms', NULL, NULL
+GO

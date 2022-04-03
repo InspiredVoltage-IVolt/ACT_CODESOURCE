@@ -1,0 +1,2 @@
+CREATE TYPE [dbo].[JSON(AUTHOR_CHAIN)] FROM nvarchar (max) NULL
+GO

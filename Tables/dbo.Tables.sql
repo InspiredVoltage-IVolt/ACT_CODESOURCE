@@ -14,3 +14,5 @@ ALTER TABLE [dbo].[Tables] ADD CONSTRAINT [PK_Tables] PRIMARY KEY CLUSTERED ([ID
 GO
 ALTER TABLE [dbo].[Tables] ADD CONSTRAINT [FK_Tables_Users_ID] FOREIGN KEY ([Owner_ID]) REFERENCES [UserData].[Users] ([ID])
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Database', 'SCHEMA', N'dbo', 'TABLE', N'Tables', NULL, NULL
+GO

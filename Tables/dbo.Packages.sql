@@ -10,3 +10,5 @@ CREATE TABLE [dbo].[Packages]
 GO
 ALTER TABLE [dbo].[Packages] ADD CONSTRAINT [PK_Packages] PRIMARY KEY CLUSTERED ([ID]) ON [PRIMARY]
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Packages', 'SCHEMA', N'dbo', 'TABLE', N'Packages', NULL, NULL
+GO

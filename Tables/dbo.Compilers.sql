@@ -11,3 +11,5 @@ CREATE TABLE [dbo].[Compilers]
 GO
 ALTER TABLE [dbo].[Compilers] ADD CONSTRAINT [PK_Compilers] PRIMARY KEY CLUSTERED ([ID]) ON [PRIMARY]
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Code', 'SCHEMA', N'dbo', 'TABLE', N'Compilers', NULL, NULL
+GO

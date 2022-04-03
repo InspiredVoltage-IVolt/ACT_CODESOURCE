@@ -12,3 +12,5 @@ ALTER TABLE [dbo].[Object_Comments] ADD CONSTRAINT [PK_Database_Table_Comments] 
 GO
 ALTER TABLE [dbo].[Object_Comments] ADD CONSTRAINT [FK_Object_Comments_Users_ID] FOREIGN KEY ([User_ID]) REFERENCES [UserData].[Users] ([ID])
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Objects', 'SCHEMA', N'dbo', 'TABLE', N'Object_Comments', NULL, NULL
+GO

@@ -17,3 +17,5 @@ ALTER TABLE [dbo].[Table_To_Columns] ADD CONSTRAINT [FK_Table_To_Columns_Columns
 GO
 ALTER TABLE [dbo].[Table_To_Columns] ADD CONSTRAINT [FK_Table_To_Columns_Tables_ID] FOREIGN KEY ([Table_ID]) REFERENCES [dbo].[Tables] ([ID])
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Database', 'SCHEMA', N'dbo', 'TABLE', N'Table_To_Columns', NULL, NULL
+GO

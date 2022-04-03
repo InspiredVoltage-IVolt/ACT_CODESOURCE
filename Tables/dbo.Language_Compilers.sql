@@ -12,5 +12,3 @@ ALTER TABLE [dbo].[Language_Compilers] ADD CONSTRAINT [PK_Language_Compilers_ID]
 GO
 ALTER TABLE [dbo].[Language_Compilers] ADD CONSTRAINT [FK_Language_Compilers_Compilers_ID] FOREIGN KEY ([Compiler_ID]) REFERENCES [dbo].[Compilers] ([ID])
 GO
-ALTER TABLE [dbo].[Language_Compilers] ADD CONSTRAINT [FK_Language_Compilers_Languages_ID] FOREIGN KEY ([Language_ID]) REFERENCES [dbo].[Languages] ([ID])
-GO

@@ -14,3 +14,5 @@ ALTER TABLE [dbo].[Package_Dependencies] ADD CONSTRAINT [FK_Package_Dependencies
 GO
 ALTER TABLE [dbo].[Package_Dependencies] ADD CONSTRAINT [FK_Package_Dependencies_Packages_ID] FOREIGN KEY ([Package_ID]) REFERENCES [dbo].[Packages] ([ID])
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Packages', 'SCHEMA', N'dbo', 'TABLE', N'Package_Dependencies', NULL, NULL
+GO

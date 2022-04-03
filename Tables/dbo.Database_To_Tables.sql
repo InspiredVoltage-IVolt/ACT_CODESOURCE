@@ -15,3 +15,5 @@ ALTER TABLE [dbo].[Database_To_Tables] ADD CONSTRAINT [FK_Database_To_Tables_Dat
 GO
 ALTER TABLE [dbo].[Database_To_Tables] ADD CONSTRAINT [FK_Database_To_Tables_Tables_ID] FOREIGN KEY ([Table_ID]) REFERENCES [dbo].[Tables] ([ID])
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Database', 'SCHEMA', N'dbo', 'TABLE', N'Database_To_Tables', NULL, NULL
+GO

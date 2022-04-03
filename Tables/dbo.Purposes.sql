@@ -11,3 +11,5 @@ CREATE TABLE [dbo].[Purposes]
 GO
 ALTER TABLE [dbo].[Purposes] ADD CONSTRAINT [PK_Purposes_1] PRIMARY KEY CLUSTERED ([ID]) ON [PRIMARY]
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Shared', 'SCHEMA', N'dbo', 'TABLE', N'Purposes', NULL, NULL
+GO

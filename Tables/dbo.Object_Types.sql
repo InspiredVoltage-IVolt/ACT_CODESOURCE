@@ -10,3 +10,5 @@ CREATE TABLE [dbo].[Object_Types]
 GO
 ALTER TABLE [dbo].[Object_Types] ADD CONSTRAINT [PK_Object_Types_ID] PRIMARY KEY CLUSTERED ([ID]) ON [PRIMARY]
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Objects', 'SCHEMA', N'dbo', 'TABLE', N'Object_Types', NULL, NULL
+GO

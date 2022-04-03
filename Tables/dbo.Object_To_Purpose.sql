@@ -13,3 +13,5 @@ ALTER TABLE [dbo].[Object_To_Purpose] ADD CONSTRAINT [PK_Object_To_Purpose] PRIM
 GO
 ALTER TABLE [dbo].[Object_To_Purpose] ADD CONSTRAINT [FK_Object_To_Purpose_Purposes_ID] FOREIGN KEY ([Purpose_ID]) REFERENCES [dbo].[Purposes] ([ID])
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Objects', 'SCHEMA', N'dbo', 'TABLE', N'Object_To_Purpose', NULL, NULL
+GO

@@ -16,3 +16,5 @@ ALTER TABLE [dbo].[Tag_To_Tag] ADD CONSTRAINT [FK_RelatedTag_To_Tag_Tags_ID] FOR
 GO
 ALTER TABLE [dbo].[Tag_To_Tag] ADD CONSTRAINT [FK_Tag_To_Tag_Tags_ID] FOREIGN KEY ([Tag_ID]) REFERENCES [dbo].[Tags] ([ID])
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Data', 'SCHEMA', N'dbo', 'TABLE', N'Tag_To_Tag', NULL, NULL
+GO

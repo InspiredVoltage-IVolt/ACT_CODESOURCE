@@ -1,0 +1,2 @@
+CREATE TYPE [dbo].[JSON(OBJECTARRAY)] FROM nvarchar (max) NULL
+GO

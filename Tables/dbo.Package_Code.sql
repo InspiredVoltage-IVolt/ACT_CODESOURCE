@@ -15,3 +15,5 @@ ALTER TABLE [dbo].[Package_Code] ADD CONSTRAINT [FK_Package_Code_Code_ID] FOREIG
 GO
 ALTER TABLE [dbo].[Package_Code] ADD CONSTRAINT [FK_Package_Code_Packages_ID] FOREIGN KEY ([Package_ID]) REFERENCES [dbo].[Packages] ([ID])
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Packages', 'SCHEMA', N'dbo', 'TABLE', N'Package_Code', NULL, NULL
+GO

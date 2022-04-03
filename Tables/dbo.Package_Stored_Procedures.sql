@@ -14,3 +14,5 @@ ALTER TABLE [dbo].[Package_Stored_Procedures] ADD CONSTRAINT [FK_Package_Stored_
 GO
 ALTER TABLE [dbo].[Package_Stored_Procedures] ADD CONSTRAINT [FK_Package_Stored_Procedures_Stored_Procedures_ID] FOREIGN KEY ([Stored_Procedure_ID]) REFERENCES [dbo].[Stored_Procedures] ([ID])
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Packages', 'SCHEMA', N'dbo', 'TABLE', N'Package_Stored_Procedures', NULL, NULL
+GO

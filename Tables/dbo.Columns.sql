@@ -15,3 +15,5 @@ ALTER TABLE [dbo].[Columns] ADD CONSTRAINT [PK_Database_Columns] PRIMARY KEY CLU
 GO
 ALTER TABLE [dbo].[Columns] ADD CONSTRAINT [FK_Columns_Users_ID] FOREIGN KEY ([User_ID]) REFERENCES [UserData].[Users] ([ID])
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Database', 'SCHEMA', N'dbo', 'TABLE', N'Columns', NULL, NULL
+GO

@@ -15,3 +15,5 @@ ALTER TABLE [UserData].[Team_To_Users] ADD CONSTRAINT [FK_Team_To_Users_Teams] F
 GO
 ALTER TABLE [UserData].[Team_To_Users] ADD CONSTRAINT [FK_Team_To_Users_Users] FOREIGN KEY ([User_ID]) REFERENCES [UserData].[Users] ([ID])
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Users', 'SCHEMA', N'UserData', 'TABLE', N'Team_To_Users', NULL, NULL
+GO

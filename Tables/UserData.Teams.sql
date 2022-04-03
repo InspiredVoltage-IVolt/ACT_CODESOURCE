@@ -11,3 +11,5 @@ ALTER TABLE [UserData].[Teams] ADD CONSTRAINT [PK_Teams] PRIMARY KEY CLUSTERED (
 GO
 ALTER TABLE [UserData].[Teams] ADD CONSTRAINT [FK_Teams_Users] FOREIGN KEY ([Creator_User_ID]) REFERENCES [UserData].[Users] ([ID])
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Users', 'SCHEMA', N'UserData', 'TABLE', N'Teams', NULL, NULL
+GO

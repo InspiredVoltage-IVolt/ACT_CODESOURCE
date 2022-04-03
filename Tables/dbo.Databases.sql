@@ -11,3 +11,5 @@ CREATE TABLE [dbo].[Databases]
 GO
 ALTER TABLE [dbo].[Databases] ADD CONSTRAINT [PK_Databases_NewID] PRIMARY KEY CLUSTERED ([ID]) ON [PRIMARY]
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Database', 'SCHEMA', N'dbo', 'TABLE', N'Databases', NULL, NULL
+GO

@@ -15,3 +15,5 @@ ALTER TABLE [dbo].[Object_To_Tag] ADD CONSTRAINT [PK_Object_To_Tag] PRIMARY KEY 
 GO
 ALTER TABLE [dbo].[Object_To_Tag] ADD CONSTRAINT [FK_Object_To_Tag_Tags_ID] FOREIGN KEY ([Tag_ID]) REFERENCES [dbo].[Tags] ([ID])
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Objects', 'SCHEMA', N'dbo', 'TABLE', N'Object_To_Tag', NULL, NULL
+GO

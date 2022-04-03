@@ -16,3 +16,5 @@ ALTER TABLE [dbo].[Views] ADD CONSTRAINT [FK_Views_Databases_ID] FOREIGN KEY ([D
 GO
 ALTER TABLE [dbo].[Views] ADD CONSTRAINT [FK_Views_Users_ID] FOREIGN KEY ([User_ID]) REFERENCES [UserData].[Users] ([ID])
 GO
+EXEC sp_addextendedproperty N'VirtualFolder', N'Database', 'SCHEMA', N'dbo', 'TABLE', N'Views', NULL, NULL
+GO
