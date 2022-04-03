@@ -1,7 +1,7 @@
 CREATE TABLE [dbo].[Language_Compilers]
 (
 [ID] [int] NOT NULL IDENTITY(1, 1),
-[Language_ID] [uniqueidentifier] NOT NULL,
+[Language_ID] [int] NOT NULL,
 [Compiler_ID] [uniqueidentifier] NOT NULL,
 [Votes] [int] NOT NULL CONSTRAINT [DF__Language___Votes__6A85CC04] DEFAULT ((0)),
 [DateAdded] [datetime] NOT NULL CONSTRAINT [DF__Language___DateA__6B79F03D] DEFAULT (getdate()),
@@ -10,5 +10,5 @@ CREATE TABLE [dbo].[Language_Compilers]
 GO
 ALTER TABLE [dbo].[Language_Compilers] ADD CONSTRAINT [PK_Language_Compilers_ID] PRIMARY KEY CLUSTERED ([ID]) ON [PRIMARY]
 GO
-ALTER TABLE [dbo].[Language_Compilers] ADD CONSTRAINT [FK_Language_Compilers_Compilers_ID] FOREIGN KEY ([Compiler_ID]) REFERENCES [dbo].[Compilers] ([ID])
+ALTER TABLE [dbo].[Language_Compilers] ADD CONSTRAINT [FK_Language_Compilers_Language_Compilers] FOREIGN KEY ([ID]) REFERENCES [dbo].[Language_Compilers] ([ID])
 GO
